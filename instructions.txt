@@ -1,0 +1,18 @@
+This repo includes a WordPress plugin that we're looking to launch very soon and we need your help to get it live. (If you're not familiar with WordPress plugins, we recommend starting here: https://developer.wordpress.org/plugins/)
+
+The main requirement:
+
+* Add a column in the table "Expires After" and make it display a human readable value. Example: "In 58 minutes."
+
+We've also been told that the plugin may not adhere to standards around Coding Style, Security, and other best practices, so it may be a good idea to review the plugin for those. Some things to keep in mind:
+
+* WordPress Coding Standards: https://make.wordpress.org/core/handbook/coding-standards/
+* Security: https://developer.wordpress.org/plugins/security/
+* i18n: https://developer.wordpress.org/plugins/internationalization/
+* General development best practices
+
+Commit your changes back to the repo. Split up commits as necessary. Refer to the info about good commit messages (see `what-is-a-good-commit-message.html` in the repo).
+
+If you need a quick way to set up a WordPress development environment, check out http://chassis.io or https://github.com/Varying-Vagrant-Vagrants/VVV
+
+Finally, let us know when you are done with the test.
