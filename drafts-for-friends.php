@@ -1,3 +1,4 @@
+
 <?php
 /*
 Plugin Name: Drafts for Friends
@@ -308,6 +309,7 @@ SELECT;
 	function print_admin_js() {
 ?>
 	<script type="text/javascript">
+	/*global jQuery*/
 	jQuery(function() {
 		jQuery('form.draftsforfriends-extend').hide();
 		jQuery('a.draftsforfriends-extend').show();
