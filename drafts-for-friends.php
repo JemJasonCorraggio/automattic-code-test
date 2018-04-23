@@ -214,7 +214,7 @@ class DraftsForFriends	{
 				<td class="actions">
 					<a class="delete" href="edit.php?page=<?php echo plugin_basename(__FILE__); ?>&amp;action=delete&amp;key=<?php echo $share['key']; ?>"><?php _e('Delete', 'draftsforfriends'); ?></a>
 				</td>
-				<td><?php _e ?></td>
+				<td><?php echo readable_expire_time($share['expire']); ?></td>
 			</tr>
 <?php
 		endforeach;
