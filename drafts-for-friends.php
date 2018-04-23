@@ -141,6 +141,18 @@ class DraftsForFriends	{
 	function get_shared() {
 		return $this->user_options['shared'];
 	}
+	
+	function readable_expire_time($expire) {
+		if ($expire>24*3600){
+			return trim(floor($expire/86400)).' day(s)';
+		} elseif ($expire>3600){
+			return trim(floor($expire/3600)).' hours(s)';
+		} elseif ($expire>60){
+			return trim(floor($expire/60)).' minutes(s)';
+		} else{
+			return trim($expire).' second(s)';	
+		}
+}
 
 	function output_existing_menu_sub_admin_page(){
 		if ($_POST['draftsforfriends_submit']) {
@@ -165,6 +177,7 @@ class DraftsForFriends	{
 				<th><?php _e('Title', 'draftsforfriends'); ?></th>
 				<th><?php _e('Link', 'draftsforfriends'); ?></th>
 				<th colspan="2" class="actions"><?php _e('Actions', 'draftsforfriends'); ?></th>
+				<th><?php _e('Expired After', 'draftsforfriends'); ?></th>
 			</tr>
 			</thead>
 			<tbody>
@@ -201,6 +214,7 @@ class DraftsForFriends	{
 				<td class="actions">
 					<a class="delete" href="edit.php?page=<?php echo plugin_basename(__FILE__); ?>&amp;action=delete&amp;key=<?php echo $share['key']; ?>"><?php _e('Delete', 'draftsforfriends'); ?></a>
 				</td>
+				<td><?php _e ?></td>
 			</tr>
 <?php
 		endforeach;
